@@ -3,7 +3,7 @@ class About extends Component {
   render() {
     return (
       <div>
-        Home page
+        Hi! My name is Katherine Li.
       </div>
     )
   }
