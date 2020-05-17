@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Muli");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 header {
   display: block;
   background-color: white;
@@ -10,23 +12,6 @@ header {
   margin: 0;
   padding: 0;
 }
-.navButton {
-  position: absolute;
-  height: 43px;
-  top: 57px;
-
-  font-family: Muli !important;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 38px;
-  /* identical to box height */
-
-  display: flex;
-  align-items: center;
-
-  color: #000000;
-}
 footer {
   display: block;
   width: 100%;
@@ -34,11 +19,80 @@ footer {
   background-color: gray;
   color: white;
 }
+.content {
+  position: absolute;
+  width: 1367px;
+  height: 890px;
+  left: 36px;
+  top: 153px;
+}
+.halfright {
+  position: absolute;
+  width: 625px;
+  height: 453px;
+  left: 684px;
+  top: 136px;
+}
+.halfleft {
+  position: absolute;
+  left: 64px;
+  top: 51px;
+}
+/* Images */
+.profile {
+  width: 529px;
+  height: 774px;
+}
 /* Nav Bar / Expanded */
-navBar {
+.navBar {
   position: absolute;
   width: 1440px;
   height: 153px;
   left: 0px;
   top: 0px;
+}
+.navTitle {
+  position: absolute;
+  width: 494px;
+  height: 102px;
+  left: 35px;
+  top: 25px;
+}
+.navButton {
+  position: absolute;
+  height: 43px;
+  top: 57px;
+}
+/* fonts */
+.h1 {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 80px;
+  color: #000000;
+}
+.h3 {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  color: #000000;
+}
+.bodyemphasis {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 45px;
+  color: #000000;
+}
+.body {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
 }

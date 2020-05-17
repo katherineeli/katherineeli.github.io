@@ -5,15 +5,17 @@ import '../styles/style.css';
 class NavBar extends Component {
   render() {
     return (
-      <header>
-          Katherine Li
+      <div className="navBar">
+        <div className="navTitle h1">
+          KATHERINE LI
+        </div>
         <ul id="headerButtons">
-          <li className="navButton" style={{left: 720, width: 107}}><Link to="About.js">ABOUT</Link></li>
-          <li className="navButton" style={{left: 847, width: 148}}><Link to="">PROJECTS</Link></li>
-          <li className="navButton" style={{left: 1015, width: 232}}><Link to="">PHOTOGRAPHY</Link></li>
-          <li className="navButton" style={{left: 1266, width: 112}}><Link to="">DESIGN</Link></li>
+          <li className="navButton h3" style={{left: 720, width: 107}}><Link to="/About">ABOUT</Link></li>
+          <li className="navButton h3" style={{left: 847, width: 148}}><Link to="">PROJECTS</Link></li>
+          <li className="navButton h3" style={{left: 1015, width: 232}}><Link to="">PHOTOGRAPHY</Link></li>
+          <li className="navButton h3" style={{left: 1266, width: 112}}><Link to="">DESIGN</Link></li>
         </ul>
-      </header>
+      </div>
     )
   }
 }
