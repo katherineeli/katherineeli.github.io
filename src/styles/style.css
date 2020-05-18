@@ -1,68 +1,161 @@
 @import url("https://fonts.googleapis.com/css?family=Muli");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-header {
-  display: block;
-  background-color: white;
-  width: 100%;
-  height: 50px;
-  color: white;
-}
-#headerButtons {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-footer {
-  display: block;
-  width: 100%;
-  height: 50px;
-  background-color: gray;
-  color: white;
+
+li {
+  margin-bottom: 10px;
 }
 .content {
-  position: absolute;
-  width: 1367px;
-  height: 890px;
-  left: 36px;
-  top: 153px;
+  /* position: relative; */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.01em 16px;
+  max-width: 1370px;
 }
-.halfright {
-  position: absolute;
-  width: 625px;
-  height: 453px;
-  left: 684px;
-  top: 136px;
+.col {
+  float: left;
+  padding: 0 8px;
 }
-.halfleft {
-  position: absolute;
-  left: 64px;
-  top: 51px;
+.col.half {
+  column-count: 2;
+  float: left;
+  width: 50%;
+  padding: 0 8px;
+}
+@media screen and (max-width: 600px) {
+  .col {
+    width: 100%;
+  }
+}
+.row.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Padding */
+.padding12 {
+  padding: 12px 24px !important;
+}
+.padding32 {
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+.padding64 {
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
 }
 /* Images */
-.profile {
+#profile {
   width: 529px;
   height: 774px;
 }
+#oldwell {
+  width: 144px;
+  height: 211px;
+}
+#jmp {
+  width: 150px;
+  height: 150px;
+}
 /* Nav Bar / Expanded */
 .navBar {
-  position: absolute;
-  width: 1440px;
+  position: sticky;
+  width: 100%;
   height: 153px;
   left: 0px;
   top: 0px;
+  background: white;
+  z-index: 9999;
 }
+.navBar.smaller {
+  height: 78px;
+}
+.navBar.smaller a#title {
+  height: 47px;
+  width: 240px;
+  left: 37px;
+  top: 17px;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 45px;
+}
+/* fix left align */
+.navBar.smaller a#button {
+  width: fit-content;
+  height: 30px;
+  left: 844px;
+  top: 22px;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+}
+/* add dropshadow onScroll */
+/* .navBar::before, .navBar::after{
+  content: '';
+ display: block;
+ height: 16px;
+ position: sticky;
+}
+.navBar::before {
+  top: 30px;
+  box-shadow: 0px 20px 5px rgba(0,0,0,5);
+}
+.navBar::after{
+  background: linear-gradient(white 10%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.4) 70%, transparent);
+  top: 0;
+  /* cover should fall over shadow 
+  z-index: 2;
+}  */
 .navTitle {
+  display: inline-block;
   position: absolute;
   width: 494px;
   height: 102px;
-  left: 35px;
-  top: 25px;
+  left: 35px; top: 25px;
+  text-decoration: none;
+  color: black;
 }
 .navButton {
+  display: inline-block;
   position: absolute;
   height: 43px;
   top: 57px;
+  width: fit-content;
+  text-decoration: none;
+  color: black;
 }
+.navButton::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.3s;
+}
+.navButton:hover::after {
+  width: 100%;
+}
+/* figure out underline on active page */
+.navButton.active {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: black;
+  width: 100%;
+}
+@media screen and (max-width: 580px) {
+  #navBar {
+    padding: 20px 10px !important;
+  }
+}
+
 /* fonts */
 .h1 {
   font-family: "Muli";
@@ -70,6 +163,14 @@ footer {
   font-weight: bold;
   font-size: 64px;
   line-height: 80px;
+  color: #000000;
+}
+.h2 {
+  font-family: Muli;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 45px;
   color: #000000;
 }
 .h3 {
@@ -80,6 +181,14 @@ footer {
   line-height: 38px;
   color: #000000;
 }
+.body {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+}
 .bodyemphasis {
   font-family: "Muli";
   font-style: normal;
@@ -88,11 +197,19 @@ footer {
   line-height: 45px;
   color: #000000;
 }
-.body {
-  font-family: "Muli";
+.bodyheader {
+  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 30px;
+  line-height: 42px;
+  color: #000000;
+}
+.subheading {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 53px;
   color: #000000;
 }
