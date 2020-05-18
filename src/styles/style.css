@@ -2,7 +2,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
 li {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+ul{
+  margin-top: 5px;
 }
 .content {
   /* position: relative; */
@@ -62,7 +65,15 @@ li {
   width: 150px;
   height: 150px;
 }
-/* Nav Bar / Expanded */
+/* Divider */
+divider {
+  width: 100%;
+  height: 2px;
+  display: block;
+  background: #B5B3B3;
+}
+
+/* Nav Bar*/
 .navBar {
   position: sticky;
   width: 100%;
@@ -71,9 +82,14 @@ li {
   top: 0px;
   background: white;
   z-index: 9999;
+  transition: all 0.3s;
+}
+.navBar a#button, .navBar a#title {
+  transition: all 0.3s;
 }
 .navBar.smaller {
   height: 78px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .navBar.smaller a#title {
   height: 47px;
@@ -95,23 +111,6 @@ li {
   line-height: 30px;
   color: #000000;
 }
-/* add dropshadow onScroll */
-/* .navBar::before, .navBar::after{
-  content: '';
- display: block;
- height: 16px;
- position: sticky;
-}
-.navBar::before {
-  top: 30px;
-  box-shadow: 0px 20px 5px rgba(0,0,0,5);
-}
-.navBar::after{
-  background: linear-gradient(white 10%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.4) 70%, transparent);
-  top: 0;
-  /* cover should fall over shadow 
-  z-index: 2;
-}  */
 .navTitle {
   display: inline-block;
   position: absolute;
