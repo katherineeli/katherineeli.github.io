@@ -11,7 +11,7 @@ class About extends Component {
       <div className="content" style={{maxWidth:1100}}>
         <div id="about" className="row center">
           <div className="col half padding12">
-            <img id= "profile" src={profile} alt="Profile"/>
+            <img id="profile" src={profile} alt="Profile"/>
           </div>
           <div className="bodyemphasis" style={{paddingTop:50}}>
             Hi! My name is Katherine Li.<br/><br/>
