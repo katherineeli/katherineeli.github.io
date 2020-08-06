@@ -6,6 +6,7 @@ import NavBar from './NavBar';
 import Projects from './Projects';
 import '../styles/style.css';
 import 'animate.css';
+// import { ReactComponent as Logo } from './logo.svg';
 
 class App extends Component {
   render() {
